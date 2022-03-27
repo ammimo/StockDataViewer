@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockDataViewerEntity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -13,6 +14,8 @@ namespace StockDataViewer
     /// </summary>
     public class General
     {
+
+        #region Properties
         public string Code { get; set; }
         public string Type { get; set; }
         public string Name { get; set; }
@@ -44,8 +47,21 @@ namespace StockDataViewer
         public string LogoURL { get; set; }
         public string FullTimeEmployees { get; set; }
         public string UpdatedAt { get; set; }
+        #endregion
 
-        public string GeneralType { get; set; }
+
+        #region ForeignKeys
+        public ICollection<GeneralListings> GeneralListings { get; set; }
+        public GeneralAddress GeneralAddress { get; set; }
+        public ICollection<GeneralOfficers> GeneralOfficers { get; set; }
+        #endregion
+
+
+        public string WebApiFilter = "&filter=General";
+
+
+
+
 
 
 
@@ -81,7 +97,7 @@ namespace StockDataViewer
         public static DataTable GetGeneralAddressWebClient(string tick, string token)
         {
             string baseUrl = "https://eodhistoricaldata.com/api/fundamentals/" + tick + "?api_token=" + token;
-            string general = "&filter=General::AddressData";
+            string general = "&::AddressData";
             string url = baseUrl + general;
 
             //Web Request
