@@ -72,12 +72,6 @@ namespace StockDataViewer
 
 
 
-        public static string GetToken()
-        {
-            return "5f36bb14ec61e1.52623955";
-        }
-
-
         public static DataTable GetGeneralAddressWebClient(string tick, string token)
         {
             string baseUrl = "https://eodhistoricaldata.com/api/fundamentals/" + tick + "?api_token=" + token;
