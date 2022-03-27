@@ -7,4 +7,14 @@
     <AssemblyName>StockDataViewerEntity</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Highlights\" />
+    <Folder Include="Holders\" />
+    <Folder Include="InsiderTransactions\" />
+    <Folder Include="Valuation\" />
+    <Folder Include="Technicals\" />
+    <Folder Include="SplitsDividends\" />
+    <Folder Include="OutstandingShares\" />
+  </ItemGroup>
+
 </Project>

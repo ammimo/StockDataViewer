@@ -26,8 +26,8 @@ namespace StockDataViewer
         public string CUSIP { get; set; }
         public string CIK { get; set; }
         public string EmployerIdNumber { get; set; }
-        public string FiscalYearEnd { get; set; }
-        public string IPODate { get; set; }
+        public DateTime FiscalYearEnd { get; set; }
+        public DateTime IPODate { get; set; }
         public string InternationalDomestic { get; set; }
         public string Sector { get; set; }
         public string Industry { get; set; }
@@ -36,14 +36,14 @@ namespace StockDataViewer
         public string GicIndustry { get; set; }
         public string GicSubIndustry { get; set; }
         public string HomeCategory { get; set; }
-        public string IsDelisted { get; set; }
+        public Boolean IsDelisted { get; set; }
         public string Description { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string WebURL { get; set; }
         public string LogoURL { get; set; }
-        public string FullTimeEmployees { get; set; }
-        public string UpdatedAt { get; set; }
+        public double FullTimeEmployees { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public string GeneralType { get; set; }
 
